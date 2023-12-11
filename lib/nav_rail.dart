@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'package:reminder_app/horizontal_card.dart';
+import 'package:reminder_app/view_list_screen.dart';
+import 'app_list_screen.dart';
 
 class MySidebar extends StatefulWidget {
   const MySidebar({super.key});
@@ -24,6 +27,19 @@ class _MySidebarState extends State<MySidebar> {
               setState(() {
                 _selectedIndex = index;
               });
+              if (index == 1) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AddApplicationListScreen()),
+                );
+              }
+              if (index == 2) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ViewListScreen()),
+                );
+              }
             },
             selectedIconTheme: const IconThemeData(color: Colors.indigo),
             leading: IconButton(

@@ -5,7 +5,11 @@ class MyCard extends StatelessWidget {
   final String text;
   final Gradient gradient;
 
-  const MyCard({super.key, required this.icon, required this.text, required this.gradient});
+  const MyCard(
+      {super.key,
+      required this.icon,
+      required this.text,
+      required this.gradient});
 
   @override
   Widget build(BuildContext context) {
@@ -52,26 +56,26 @@ class MyCard extends StatelessWidget {
 class HomeScreen extends StatelessWidget {
   final List<Map<String, dynamic>> items = [
     {
-      'icon': Icons.add_box_outlined,
-      'text': 'Add List',
+      'icon': Icons.calendar_month_outlined,
+      'text': 'Schedule Reminder',
       'gradient':
           LinearGradient(colors: [Colors.indigo.shade200, Colors.white54])
     },
     {
-      'icon': Icons.list_outlined,
-      'text': 'View List',
+      'icon': Icons.add_box_outlined,
+      'text': 'Add List',
       'gradient':
           LinearGradient(colors: [Colors.yellow.shade100, Colors.white54])
     },
     {
-      'icon': Icons.calendar_month_outlined,
-      'text': 'Schedule Reminder',
+      'icon': Icons.edit_document,
+      'text': 'Edit List',
       'gradient':
           LinearGradient(colors: [Colors.green.shade300, Colors.white54])
     },
     {
-      'icon': Icons.edit_document,
-      'text': 'Edit List',
+      'icon': Icons.list_outlined,
+      'text': 'View List',
       'gradient':
           LinearGradient(colors: [Colors.orange.shade400, Colors.white54])
     },
